@@ -1,6 +1,12 @@
 ## About
 
-This is the repository for the team Quirky Crews for our app Quirky Mentors. This repository holds the source code for the Quirky Mentors app.
+This is the repository for the team Quirky Crews for our app Quirky Mentors. This repository holds the source code for the Quirky Mentors app. 
+Team Members are:
+Tarun - Backend Developer
+Violet - Frontend Developer
+Kinzi - Fullstack Developer
+Veena - Data Analyst
+Devana - Designer
 
 ## Requirements
 
