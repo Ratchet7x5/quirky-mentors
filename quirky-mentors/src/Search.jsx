@@ -1,16 +1,32 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import { useState } from "react";
 import styled from "@emotion/styled";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Autocomplete, TextField, ListItemAvatar, Avatar, ListItem, List } from "@mui/material";
 
 function Search() {
   const nav = useNavigate();
+  const dummyData = ["blah", "blah2"]; // get data in the DB
+  const [selectedVal, setValue] = useState('');
+
+  const handleSelection = (event, newVal) => {
+    setValue(newVal);
+  }
+
   return (
-    <>
-      <Box>
-        <Typography>Search</Typography>
+    <div className="">
+      <div className="">
         <Button onClick={() => nav("/profile-form")}>Back</Button>
-      </Box>
-    </>
+        <Typography>App Name (Search)</Typography>
+      </div>
+      <div className="">
+        <Autocomplete 
+          options={dummyData}
+          renderInput={(params)=> <TextField {...params}/>}
+          value={selectedVal}
+          onChange={handleSelection}/>
+        <Typography>{selectedVal}</Typography>
+      </div>
+    </div>
   );
 }
 
