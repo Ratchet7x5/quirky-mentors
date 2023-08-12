@@ -2,7 +2,9 @@ async function getProfileAPI(request) {
   try {
     //enable this axios request AFTER the array was edited
     //const response = await axios.request(options); 
-    console.log(typeof response);
+    console.log(typeof response); 
+    // the response.data is an object, so we need to convert it to a JSON format instead
+    // use JSON.stringify(obj);
     console.log(response.data);
   } catch (error) {
     console.error(error);
