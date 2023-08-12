@@ -1,7 +1,7 @@
 {
   "name": "backend-qm",
   "version": "1.0.0",
-  "main": "server/src/index.ts",
+  "main": "server/src/server.js",
   "scripts": {
     "watch": "tsc -w",
     "server": "node --watch dist/server.js",
