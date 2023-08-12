@@ -21,6 +21,9 @@ app.listen(PORT, () => {
   console.log("Server running on " + PORT);
 });
 
+// https://rapidapi.com/iscraper/api/linkedin-profiles-and-company-data
+// uses left: 83 
+// free uses: 100
 const axios = require("axios");
 
 //this is the request body, with params and headers
