@@ -18,6 +18,7 @@ Devana - Designer
 
 VSCode Extensions:
 ```
+MUI
 Tailwind CSS IntelliSense: 
 GitHub Pull Requests and Issues
 ```
