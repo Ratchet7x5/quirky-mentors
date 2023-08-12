@@ -1,14 +1,18 @@
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import styled from "@emotion/styled";
+import { Box, Typography, Button } from "@mui/material";
 
-function About(){
-    const nav = useNavigate()
+function About() {
+  const nav = useNavigate();
 
-    return(
-        <>
-        <p>About</p>
-        <button onClick={() => nav("/signup")}>Go to Sign Up</button>
-        </>
-    )
+  return (
+    <>
+      <Box>
+        <Typography>About</Typography>
+        <Button onClick={() => nav("/signup")}>Go to Sign Up</Button>
+      </Box>
+    </>
+  );
 }
 
-export default About
+export default About;

@@ -1,14 +1,18 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import styled from "@emotion/styled";
+import { Box, Typography, Button } from "@mui/material";
 
-function ProfileSetup(){
-    const nav = useNavigate()
-    return(
-        <>
-        <p>Profile Form</p>
-        <button onClick={() => nav("/search")}>Go to Search</button>
-        <button onClick={() => nav("/signup")}>Back</button>
-        </>
-    )
+function ProfileSetup() {
+  const nav = useNavigate();
+  return (
+    <>
+      <Box>
+        <Typography>Profile Form</Typography>
+        <Button onClick={() => nav("/search")}>Go to Search</Button>
+        <Button onClick={() => nav("/signup")}>Back</Button>
+      </Box>
+    </>
+  );
 }
 
-export default ProfileSetup
+export default ProfileSetup;
