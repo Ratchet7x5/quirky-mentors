@@ -14,7 +14,7 @@ Devana - Designer
 * Express
 * NodeJs
 * React
-* Mui
+* Material UI
 * MongoDB
 * TailwindCss
 
