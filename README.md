@@ -10,6 +10,14 @@ Veena - Data Analyst
 Devana - Designer
 ```
 
+## Tech Stack
+* Express
+* NodeJs
+* React
+* Material UI
+* MongoDB
+* TailwindCss
+
 ## Requirements
 
 * Node v16.14 or newer
