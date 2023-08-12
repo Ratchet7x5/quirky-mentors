@@ -10,6 +10,14 @@ Veena - Data Analyst
 Devana - Designer
 ```
 
+## Tech Stack
+* Express
+* NodeJs
+* React
+* Mui
+* MongoDB
+* TailwindCss
+
 ## Requirements
 
 * Node v16.14 or newer
@@ -18,7 +26,6 @@ Devana - Designer
 
 VSCode Extensions:
 ```
-MUI
 Tailwind CSS IntelliSense: 
 GitHub Pull Requests and Issues
 ```
