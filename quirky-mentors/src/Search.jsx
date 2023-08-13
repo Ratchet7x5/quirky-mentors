@@ -8,8 +8,8 @@ import { fontSize } from "@mui/system";
 function Search() {
   const nav = useNavigate();
   const dummyData = ["CSS", "React", "JavaScript", "C", "Rust"]
-  const [selectedVal, setValue] = useState('React');
-  const [selectedProfile, setProfile] = useState([]);
+  const [selectedVal, setValue] = useState('');
+  const [selectedProfile, setProfile] = useState(modifiedProfileData);
 
   const handleSelection = (event, newVal) => {
     setValue(newVal);
@@ -18,8 +18,8 @@ function Search() {
   //search profiles with the selected skills
   const getProfile = () => {
     let profiles = modifiedProfileData.filter(
-        (profile)=> profile.skills.includes(selectedVal)
-      )
+      (profile)=> profile.skills.includes(selectedVal)
+    )
     setProfile(profiles)
   }
 
@@ -34,7 +34,7 @@ function Search() {
             <Typography sx={{fontSize:"15px"}}>{profile.job_title}</Typography>
           </ListItemText>
           <ListItemText>{profile.skills.map((skill)=>
-            <Box display="inline" sx={{backgroundColor:"#C8D7FF", marginRight:"4px", padding:"3px", borderRadius:"5px"}}>{skill}</Box>
+            <Box key={skill} display="inline" sx={{backgroundColor:"#C8D7FF", marginRight:"4px", padding:"3px", borderRadius:"5px"}}>{skill}</Box>
           )}</ListItemText>
         </Box>
       </ListItemButton>
