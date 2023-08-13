@@ -42,7 +42,7 @@ function Navbar() {
         icon={<AccountCircleOutlinedIcon />}
       />
       <BottomNavigationAction
-        value="/search" // Assuming you want this to navigate to a search page.
+        value="/home" // Assuming you want this to navigate to a search page.
         label="Sign out"
         icon={<LogoutIcon />}
       />
