@@ -28,8 +28,5 @@ let modifiedProfileData = [
   },
 ]
 
-<<<<<<< HEAD:quirky-mentors/src/fakeData.js
 export {modifiedProfileData}
-=======
-export { modifiedProfileData }
->>>>>>> main:src/fakeData.js
+

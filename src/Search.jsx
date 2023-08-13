@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { Box, Typography, Button, Autocomplete, TextField, ListItemAvatar, Avatar, ListItem, List, ListItemText, ListItemButton } from "@mui/material";
 import {modifiedProfileData} from "./fakeData"
 import { fontSize } from "@mui/system";
+import React from "react";
 
 function Search() {
   const nav = useNavigate();
