@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import vercel from 'vite-plugin-vercel'
 
 // @Ratchet7x5 integrate a server.js file using the guide below
 //Read this for backend integration
@@ -8,7 +7,7 @@ import vercel from 'vite-plugin-vercel'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), vercel()],
+  plugins: [react()],
   // build: {
   //   // generate manifest.json in outDir
   //   manifest: true,
