@@ -7,7 +7,7 @@ import { fontSize } from "@mui/system";
 
 function Search() {
   const nav = useNavigate();
-  const dummyData = ["CSS", "React", "JavaScript", "C"]
+  const dummyData = ["CSS", "React", "JavaScript", "C", "Rust"]
   const [selectedVal, setValue] = useState('React');
   const [selectedProfile, setProfile] = useState([]);
 
@@ -26,7 +26,7 @@ function Search() {
   const profileList = selectedProfile.map((profile) => 
       <ListItemButton key={profile.profile_id} href={`https://www.linkedin.com/in/${profile.profile_id}/`}>
         <ListItemAvatar>
-          <Avatar sx={{height:"45px", width:"45px"}}></Avatar>
+          <Avatar sx={{height:"45px", width:"45px"}} src={profile.profile_picture}></Avatar>
         </ListItemAvatar>
         <Box>
           <ListItemText>{profile.first_name} {profile.last_name}</ListItemText>
@@ -38,7 +38,7 @@ function Search() {
   return (
     <div>
       <div className="">
-        <Typography sx={{textAlign:"left", fontSize:"20px", paddingBottom:"5px"}}>App Name</Typography>
+        <Typography sx={{textAlign:"left", fontSize:"20px", paddingBottom:"5px"}}>Ment2Be</Typography>
       </div>
       <div className="">
         <Autocomplete 
