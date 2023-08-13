@@ -45,94 +45,54 @@ function ProfileSetup() {
     value: key,
   }));
 
-  const [saving, setSaving] = React.useState(false);
-  const [saveSuccess, setSaveSuccess] = React.useState(null);
-  const [saveError, setSaveError] = React.useState(null);
-
-  const handleSave = async () => {
-    setSaving(true);
-    setSaveSuccess(null);
-    setSaveError(null);
-
-    const profileData = {
-      firstName: document.getElementById("first-name").value,
-      lastName: document.getElementById("last-name").value,
-      email: document.getElementById("email").value,
-      gender,
-      role,
-      institution: document.getElementById("institution").value,
-      country: selectedCountry,
-    };
-
-    try {
-      const response = await fetch("/api/profile", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(profileData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSaveSuccess(data.message);
-      } else {
-        setSaveError(data.error);
-      }
-    } catch (error) {
-      setSaveError("An unexpected error occurred.");
-    } finally {
-      setSaving(false);
-    }
-  };
-
   return (
     <>
-      <Box sx={{ position: "relative", textAlign: "center", mb: 3 }}>
-        <Button
-          onClick={() => nav("/signup")}
-          sx={{
-            position: "absolute",
-            left: 0,
-            top: "50%",
-            transform: "translateY(-50%)",
-          }}
-        >
-          <CardMedia
-            component="img"
-            sx={{ width: 30 }}
-            image="arrow-left.png"
-            alt="Live from space album cover"
-          />
-        </Button>
-        <Typography variant="h3" gutterBottom>
-          Profile
-        </Typography>
-      </Box>
-      <Box component="form" noValidate autoComplete="off">
-        <AvatarSection />
-        <InfoFields
-          role={role}
-          setRole={setRole}
-          gender={gender}
-          setGender={setGender}
-          selectedCountry={selectedCountry}
-          setSelectedCountry={setSelectedCountry}
-          countryArr={countryArr}
-          firstName={firstName}
-          lastName={lastName}
-          email={email}
-        />
-        <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+      <Box sx={{ padding: 4 }}>
+        <Box sx={{ position: "relative", textAlign: "center", mb: 3 }}>
           <Button
-            variant="contained"
-            color="primary"
-            onClick={() => nav("/search")}
-            fullWidth
+            onClick={() => nav("/signup")}
+            sx={{
+              position: "absolute",
+              left: 0,
+              top: "50%",
+              transform: "translateY(-50%)",
+            }}
           >
-            Save
+            <CardMedia
+              component="img"
+              sx={{ width: 30 }}
+              image="arrow-left.png"
+              alt="Live from space album cover"
+            />
           </Button>
+          <Typography variant="h3" gutterBottom>
+            Profile
+          </Typography>
+        </Box>
+        <Box component="form" noValidate autoComplete="off">
+          <AvatarSection />
+          <InfoFields
+            role={role}
+            setRole={setRole}
+            gender={gender}
+            setGender={setGender}
+            selectedCountry={selectedCountry}
+            setSelectedCountry={setSelectedCountry}
+            countryArr={countryArr}
+            firstName={firstName}
+            lastName={lastName}
+            email={email}
+          />
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => nav("/search")}
+              fullWidth
+            >
+              Save
+            </Button>
+          </Box>
         </Box>
       </Box>
     </>

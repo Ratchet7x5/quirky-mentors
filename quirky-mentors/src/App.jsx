@@ -4,7 +4,7 @@ import Search from "./Search";
 import About from "./About";
 import ProfileSetup from "./ProfileSetup";
 import { Routes, Route } from "react-router-dom";
-import { Box } from "@mui/material";
+import Navbar from "./Navbar";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="profile-form" element={<ProfileSetup />} />
         <Route path="search" element={<Search />} />
       </Routes>
+      <Navbar />
     </>
   );
 }
