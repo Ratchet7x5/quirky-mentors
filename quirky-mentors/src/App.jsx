@@ -8,14 +8,14 @@ import {Routes, Route} from "react-router-dom"
 function App() {
 
   return (
-    <>
+    <div className='top-0 left-0 h-screen w-screen'>
       <Routes>
         <Route path="/" element={<About/>}/>
         <Route path="signup" element={<SignUp/>}/>
         <Route path="profile-form" element={<ProfileSetup/>}/>
         <Route path="search" element={<Search/>}/>
       </Routes>
-    </>
+    </div>
   )
 }
 

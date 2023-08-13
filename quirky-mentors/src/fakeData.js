@@ -18,3 +18,5 @@ let modifiedProfileData = [
     job_title: 'Developer Relations Engineer', //randomly choose between "Manager", "Backend Engineer", "Frontend Developer"
   },
 ]
+
+export {modifiedProfileData}
