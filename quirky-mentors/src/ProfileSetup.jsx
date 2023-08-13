@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import countries from "i18n-iso-countries";
 import enLocale from "i18n-iso-countries/langs/en.json";
+import { modifiedProfileData } from "./fakeData.js";
 
 countries.registerLocale(enLocale);
 
@@ -33,7 +34,11 @@ function ProfileSetup() {
   const [role, setRole] = React.useState("");
   const [gender, setGender] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState("");
+  const profile = modifiedProfileData[0];
 
+  const [firstName, setFirstName] = React.useState(profile.first_name);
+  const [lastName, setLastName] = React.useState(profile.last_name);
+  const [email] = React.useState(profile.email);
   const countryObj = countries.getNames("en", { select: "official" });
   const countryArr = Object.entries(countryObj).map(([key, value]) => ({
     label: value,
@@ -115,6 +120,9 @@ function ProfileSetup() {
           selectedCountry={selectedCountry}
           setSelectedCountry={setSelectedCountry}
           countryArr={countryArr}
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
         />
         <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
           <Button
@@ -156,6 +164,9 @@ function InfoFields({
   selectedCountry,
   setSelectedCountry,
   countryArr,
+  firstName,
+  lastName,
+  email,
 }) {
   return (
     <Box>
@@ -164,7 +175,7 @@ function InfoFields({
         required
         id="first-name"
         label="First Name"
-        defaultValue=""
+        defaultValue={firstName}
         sx={{ mb: 2 }}
       />
       <TextField
@@ -172,7 +183,7 @@ function InfoFields({
         required
         id="last-name"
         label="Last Name"
-        defaultValue=""
+        defaultValue={lastName}
         sx={{ mb: 2 }}
       />
       <TextField
@@ -180,7 +191,7 @@ function InfoFields({
         disabled
         id="email"
         label="E-mail"
-        defaultValue=""
+        defaultValue={email}
         sx={{ mb: 2 }}
       />
       <Box sx={{ display: "flex", gap: 2, alignItems: "flex-start", mb: 2 }}>
