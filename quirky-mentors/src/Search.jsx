@@ -29,8 +29,13 @@ function Search() {
           <Avatar sx={{height:"45px", width:"45px"}} src={profile.profile_picture}></Avatar>
         </ListItemAvatar>
         <Box>
-          <ListItemText>{profile.first_name} {profile.last_name}</ListItemText>
-          <ListItemText>{profile.job_title}</ListItemText>
+          <ListItemText sx={{margin:"0px"}}>
+            <Typography sx={{fontSize:"20px"}}>{profile.first_name} {profile.last_name}</Typography>
+            <Typography sx={{fontSize:"15px"}}>{profile.job_title}</Typography>
+          </ListItemText>
+          <ListItemText>{profile.skills.map((skill)=>
+            <Box display="inline" sx={{backgroundColor:"#C8D7FF", marginRight:"4px", padding:"3px", borderRadius:"5px"}}>{skill}</Box>
+          )}</ListItemText>
         </Box>
       </ListItemButton>
     )
