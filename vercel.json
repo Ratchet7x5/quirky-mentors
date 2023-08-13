@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "./quirky-mentors/index.html"
+      "destination": "./index.html"
     }
   ]
 }
