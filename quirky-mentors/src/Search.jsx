@@ -1,8 +1,9 @@
 import { useNavigate} from "react-router-dom";
 import { useState } from "react";
 import styled from "@emotion/styled";
-import { Box, Typography, Button, Autocomplete, TextField, ListItemAvatar, Avatar, ListItem, List, ListItemText } from "@mui/material";
+import { Box, Typography, Button, Autocomplete, TextField, ListItemAvatar, Avatar, ListItem, List, ListItemText, ListItemButton } from "@mui/material";
 import {modifiedProfileData} from "./fakeData"
+import { fontSize } from "@mui/system";
 
 function Search() {
   const nav = useNavigate();
@@ -23,19 +24,21 @@ function Search() {
   }
 
   const profileList = selectedProfile.map((profile) => 
-      <ListItem>
+      <ListItemButton key={profile.profile_id} href={`https://www.linkedin.com/in/${profile.profile_id}/`}>
         <ListItemAvatar>
-          <Avatar></Avatar>
+          <Avatar sx={{height:"45px", width:"45px"}}></Avatar>
         </ListItemAvatar>
-        <ListItemText>{profile.first_name}</ListItemText>
-      </ListItem>
+        <Box>
+          <ListItemText>{profile.first_name} {profile.last_name}</ListItemText>
+          <ListItemText>{profile.job_title}</ListItemText>
+        </Box>
+      </ListItemButton>
     )
 
   return (
     <div>
       <div className="">
-        <Button className="top-0 left-0" onClick={() => nav("/profile-form")}>Back</Button>
-        <Typography className="">App Name</Typography>
+        <Typography sx={{textAlign:"left", fontSize:"20px", paddingBottom:"5px"}}>App Name</Typography>
       </div>
       <div className="">
         <Autocomplete 
