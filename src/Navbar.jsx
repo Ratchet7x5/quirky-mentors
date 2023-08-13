@@ -20,10 +20,10 @@ function Navbar() {
       showLabels
       sx={{
         backgroundColor: "#B2A0E7",
-        position: "fixed", 
-        bottom:"0px",
-        right:"0px",
-        left:"0px"
+        position: "fixed",
+        bottom: "0px",
+        right: "0px",
+        left: "0px",
       }}
     >
       <BottomNavigationAction
@@ -42,7 +42,7 @@ function Navbar() {
         icon={<AccountCircleOutlinedIcon />}
       />
       <BottomNavigationAction
-        value="/home" // Assuming you want this to navigate to a search page.
+        value="/signup" // Assuming you want this to navigate to a search page.
         label="Sign out"
         icon={<LogoutIcon />}
       />
