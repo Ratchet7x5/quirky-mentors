@@ -9,19 +9,19 @@ import vercel from 'vite-plugin-vercel'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), vercel()],
-  build: {
-    // generate manifest.json in outDir
-    manifest: true,
-    rollupOptions: {
-      // overwrite default .html entry
-      input: '../quirky-mentors/server/server.js',
-    },
-  },
-  server: {
-    //origin: 'http://127.0.0.1:3000',
-    proxy: {
-      // string shorthand: http://localhost:5173/foo -> http://localhost:4567/foo
-      '/api': 'http://localhost:3000',
-    },
-  },
+  // build: {
+  //   // generate manifest.json in outDir
+  //   manifest: true,
+  //   rollupOptions: {
+  //     // overwrite default .html entry
+  //     input: '',
+  //   },
+  // },
+  // server: {
+  //   //origin: 'http://127.0.0.1:3000',
+  //   proxy: {
+  //     // string shorthand: http://localhost:5173/foo -> http://localhost:4567/foo
+  //     '/api': 'http://localhost:3000',
+  //   },
+  // },
 })
