@@ -17,6 +17,19 @@ let modifiedProfileData = [
     profile_picture: 'https://avatars.githubusercontent.com/u/42661870?v=4',
     job_title: 'Developer Relations Engineer', //randomly choose between "Manager", "Backend Engineer", "Frontend Developer"
   },
+  {
+    profile_id: 'aprilchen64',
+    skills: ['Docker', 'C#', 'C++'],
+    first_name: 'April',
+    last_name: 'Chen',
+    email: 'axaio@fake.com', //add this field manually via faker (or something else)
+    profile_picture: '',
+    job_title: 'Software Engineer', //randomly choose between "Manager", "Backend Engineer", "Frontend Developer"
+  },
 ]
 
+<<<<<<< HEAD:quirky-mentors/src/fakeData.js
 export {modifiedProfileData}
+=======
+export { modifiedProfileData }
+>>>>>>> main:src/fakeData.js
