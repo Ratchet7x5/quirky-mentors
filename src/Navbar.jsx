@@ -20,6 +20,10 @@ function Navbar() {
       showLabels
       sx={{
         backgroundColor: "#B2A0E7",
+        position: "fixed", 
+        bottom:"0px",
+        right:"0px",
+        left:"0px"
       }}
     >
       <BottomNavigationAction
