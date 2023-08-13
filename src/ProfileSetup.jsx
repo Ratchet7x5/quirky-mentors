@@ -85,8 +85,8 @@ function ProfileSetup() {
           />
           <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
             <Button
-              variant="contained"
-              color="primary"
+              variant="outlined"
+              color="secondary"
               onClick={() => nav("/search")}
               fullWidth
             >
