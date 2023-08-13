@@ -5,6 +5,7 @@ import About from "./About";
 import ProfileSetup from "./ProfileSetup";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
+import React from "react";
 
 
 function App() {
