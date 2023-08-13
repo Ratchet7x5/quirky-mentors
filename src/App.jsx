@@ -6,17 +6,18 @@ import ProfileSetup from "./ProfileSetup";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 
+
 function App() {
   return (
-    <>
+    <div className="padding-bottom">
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="profile-form" element={<ProfileSetup />} />
         <Route path="search" element={<Search />} />
       </Routes>
-      <Navbar />
-    </>
+      <Navbar/>
+    </div>
   );
 }
 
